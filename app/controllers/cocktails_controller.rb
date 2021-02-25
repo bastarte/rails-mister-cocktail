@@ -4,12 +4,14 @@ class CocktailsController < ApplicationController
   end
 
   def new
-    @cocktails = Cocktail.new
+    @cocktail = Cocktail.new
   end
 
   def create
-    # @cocktail = Cocktail.new(cocktail_params)
-    # @cocktail.save
+    @cocktail = Cocktail.new(cocktail_params)
+    @cocktail.save!
+
+    redirect_to cocktails_path
   end
 
   def show
@@ -18,4 +20,7 @@ class CocktailsController < ApplicationController
 
   private
 
+  def cocktail_params
+    params.require(:cocktail).permit(:name)
+  end
 end

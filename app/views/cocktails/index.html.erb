@@ -1,7 +1,12 @@
-<h1>What shall we drink today ?</h1>
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li><span><%= cocktail.name %></span><%= ": #{cocktail.doses.first.description } #{cocktail.ingredients.first.name } " %></li>
+<div class="card">
+  <h1>What shall we drink today ?</h1>
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+    <li><span><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+      <% end %>
+    </ul>
 
-  <% end %>
-</ul>
+</div>
+<div class="text">
+    <%= link_to "Create a new cocktail", new_cocktail_path %>
+</div>
