@@ -1,0 +1,7 @@
+<h1>What shall we drink today ?</h1>
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <li><span><%= cocktail.name %></span><%= ": #{cocktail.doses.first.description } #{cocktail.ingredients.first.name } " %></li>
+
+  <% end %>
+</ul>
