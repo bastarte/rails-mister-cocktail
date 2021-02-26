@@ -28,6 +28,8 @@ gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 # Prepare for storage of Cloudinary secure keys
 gem 'dotenv-rails', groups: [:development, :test]
+# Cloudinary to store pictures online
+gem 'cloudinary', '~> 1.16.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
