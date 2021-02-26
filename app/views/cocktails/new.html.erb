@@ -2,6 +2,7 @@
 
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name, error: "Some error on the cocktail name"%>
+  <%= f.input :photo, as: :file %>
 
 
   <%= f.submit "Create cocktail", class: "btn btn-primary" %>
