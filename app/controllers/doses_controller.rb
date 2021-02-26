@@ -26,7 +26,5 @@ class DosesController < ApplicationController
 
   def dose_params
     params.require(:dose).permit(:ingredient_id, :cocktail_id, :description)
-  endroy
-
   end
 end

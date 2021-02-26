@@ -5,6 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+COCKTAILS = [
+    "Party hard, party harder",
+    "Drink drink drink drink",
+    "Copacabana on ice",
+    "Pilipili party",
+    "Plain pint of rum",
+    "Alain",
+    "Never again",
+    "Bella vita"
+]
+
 INGREDIENTS = [
     {
         "strIngredient1": "Light rum"
@@ -312,8 +323,13 @@ puts "clean DB"
 Ingredient.destroy_all
 puts "DB cleaned"
 
-p INGREDIENTS
+puts "creating cocktails"
+COCKTAILS.each do |cocktail|
+  puts cocktail
+  Cocktail.create!(name: cocktail)
+end
 
+puts "creating ingredients"
 INGREDIENTS.each do |ingredient|
   puts ingredient[:strIngredient1]
   Ingredient.create!(name: ingredient[:strIngredient1])
