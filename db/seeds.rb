@@ -320,6 +320,7 @@ INGREDIENTS = [
 ]
 
 puts "clean DB"
+Cocktail.destroy_all
 Ingredient.destroy_all
 puts "DB cleaned"
 
